@@ -1,4 +1,8 @@
+import brain.input.InputManager;
+
 import javax.swing.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -25,6 +29,24 @@ public class GameWindow extends JFrame {
         this.setVisible(true);
         this.setTitle("WhErE'S yUor BrAiN??");
         lastTimeUpdate = System.nanoTime();
+
+
+        this.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                InputManager.instance.keyPressed(e);
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                InputManager.instance.keyReleased(e);
+            }
+        });
     }
 
     public void gameLoop(){

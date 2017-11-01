@@ -1,5 +1,9 @@
 import bases.GameObject;
 import brain.BackGround;
+import brain.fallingshape.RightShape;
+import brain.playershape.Player;
+import brain.playershape.PlayerLeftShape;
+import brain.playershape.PlayerRightShape;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,6 +23,12 @@ public class GameCanvas extends JPanel {
         backGraphics = backBuffer.getGraphics();
 
         GameObject.add(new BackGround());
+
+        GameObject.add(new PlayerRightShape());
+//
+        GameObject.add(new PlayerLeftShape());
+
+//        GameObject.add(new Player());
     }
 
 
