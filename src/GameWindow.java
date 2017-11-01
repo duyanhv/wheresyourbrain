@@ -11,7 +11,7 @@ public class GameWindow extends JFrame {
     long lastTimeUpdate;
 
     public GameWindow(){
-        this.setSize(400,600);
+        this.setSize(384,600);
         this.canvas = new GameCanvas();
         this.addWindowListener(new WindowAdapter() {
             @Override

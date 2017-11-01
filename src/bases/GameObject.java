@@ -21,6 +21,19 @@ public class GameObject {
         position = new Vector2D();
         isActive = true;
     }
+    public static void add(GameObject gameObject){
+        newGameObjects.add(gameObject);
+    }
+
+    public void render(Graphics g) {
+        if(renderer != null){
+            renderer.render(g,position);
+        }
+    }
+
+    public void run() {
+
+    }
     
     public static void runAll(){
         for(GameObject gameObject : gameObjects){
@@ -40,16 +53,7 @@ public class GameObject {
         }
     }
 
-    private void render(Graphics g) {
-        if(renderer != null){
-            renderer.render(g,position);
-        }
-    }
 
-    private void run() {
-    }
 
-    public static void add(GameObject gameObject){
-        newGameObjects.add(gameObject);
-    }
+
 }

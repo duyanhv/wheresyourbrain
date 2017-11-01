@@ -11,6 +11,7 @@ import java.io.IOException;
 public class Utils {
    public static BufferedImage loadImage(String url){
        try {
+           System.out.println(url);
            BufferedImage image = ImageIO.read(new File(url));
             return image;
        } catch (IOException e) {

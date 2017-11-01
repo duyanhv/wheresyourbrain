@@ -21,8 +21,8 @@ public class ImageRenderer implements Renderer {
         if(image != null){
             g.drawImage(
                     image,
-                    (int) (position.x - image.getWidth() / 2),
-                    (int) (position.y - image.getHeight() / 2),
+                    (int) (position.x - image.getWidth() /2),
+                    (int) (position.y - image.getHeight() /2),
                     null);
         }
     }

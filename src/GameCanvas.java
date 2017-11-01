@@ -14,7 +14,7 @@ public class GameCanvas extends JPanel {
     Graphics backGraphics;
 
     public GameCanvas(){
-        backBuffer = new BufferedImage(400,600, BufferedImage.TYPE_INT_ARGB);
+        backBuffer = new BufferedImage(384,600, BufferedImage.TYPE_INT_ARGB);
 
         backGraphics = backBuffer.getGraphics();
 
